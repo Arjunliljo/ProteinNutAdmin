@@ -1,0 +1,28 @@
+.orders {
+  &__header {
+    height: 8rem;
+    @include flex(between);
+  }
+  &__header-details {
+    height: 100%;
+    width: 25rem;
+
+    & h2 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: $text-gray;
+    }
+  }
+  &__headeritems-container {
+    flex: 1;
+    height: 100%;
+    @include flex(center);
+    padding-left: 3rem;
+  }
+  &__table {
+    // check main-table in base.scss
+  }
+  &__footer {
+    @include flex(between);
+  }
+}

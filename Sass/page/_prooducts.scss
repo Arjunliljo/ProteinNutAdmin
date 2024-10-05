@@ -1,0 +1,15 @@
+.products {
+  &__body {
+    //check main-body class in base.scss
+  }
+  &__header {
+  }
+
+  &__table {
+    //check main-body class in base.scss
+  }
+
+  &__footer {
+    @include flex(between);
+  }
+}

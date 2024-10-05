@@ -1,0 +1,14 @@
+.btn {
+  border: none;
+  cursor: pointer;
+}
+.secondary-btn,
+.primary-btn {
+  background-color: $color-green;
+  color: $light-gray;
+  border-radius: 15rem;
+  padding: 0.8rem 3rem;
+}
+.secondary-btn {
+  background-color: $color-red;
+}
