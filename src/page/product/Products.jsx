@@ -12,7 +12,6 @@ function Products() {
         <ProductsHeader />
         <ProductsTable />
         <ProductsFooter />
-        {/* foote */}
       </div>
     </main>
   );
