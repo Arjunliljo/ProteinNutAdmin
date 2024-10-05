@@ -150,36 +150,34 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 6rem;
 }
 .detailsContainer__griid_items {
-  background-color: rgb(12, 136, 136);
   height: 100%;
   flex: 1;
-  margin: auto;
   border-radius: 5px;
   flex-direction: column;
 }
 .detailsContainer p {
-  padding: 1rem;
   font-size: medium;
+  padding: 2rem 0;
 }
 
 .detailsContainer2 {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 0 2rem;
 }
 .detailsContainer2__item_details {
-  background-color: rgb(226, 162, 162);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 8rem;
 }
 
 .product_item {
   background-color: rgb(218, 215, 220);
-  height: 100%;
+  height: calc(100% - 8rem);
   width: 100%;
   border-radius: 4px;
 }
