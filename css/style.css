@@ -229,6 +229,11 @@ li {
   align-items: center;
   justify-content: space-between;
 }
+.reviews__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .reviews__footer {
   display: flex;
   align-items: center;
