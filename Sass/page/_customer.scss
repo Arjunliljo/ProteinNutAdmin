@@ -1,0 +1,5 @@
+.customer {
+  &__footer {
+    @include flex(between);
+  }
+}

@@ -180,6 +180,29 @@ li {
   justify-content: space-between;
 }
 
+.coupons__table {
+  height: 90%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 10px;
+}
+.coupons__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.reviews__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.customer__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .btn {
   border: none;
   cursor: pointer;

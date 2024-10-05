@@ -1,0 +1,15 @@
+.coupons {
+  &__table {
+    height: 90%;
+    box-shadow: $shadow;
+    background-color: white;
+    border-radius: $border-radius-big;
+  }
+
+  &__footer {
+    @include flex(between);
+  }
+
+  &__footerBtns {
+  }
+}
