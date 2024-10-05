@@ -1,4 +1,7 @@
 .reviews {
+  &__header {
+    @include flex(between);
+  }
   &__footer {
     @include flex(between);
   }
