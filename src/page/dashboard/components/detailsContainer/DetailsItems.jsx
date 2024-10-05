@@ -8,12 +8,12 @@ export const DetailsItems = () => {
             <div className='product_item'></div>
 
             <div className='detailsContainer2__item_details'>
-                <div className='product_item_detail'>
+                <div>
                     <p>item title here</p>
-                    <p>100USD</p>
+                    <p >12</p>
                 </div>
                 <div>
-                    <p>12</p>
+                    <p>100USD</p>
                     <p>7</p>
                 </div>
             </div>

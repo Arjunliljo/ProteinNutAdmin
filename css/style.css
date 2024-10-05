@@ -150,14 +150,14 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 3rem;
 }
 .detailsContainer__griid_items {
   background-color: rgb(12, 136, 136);
   height: 100%;
   flex: 1;
   margin: auto;
-  border-radius: 5px;
+  border-radius: 10px;
   flex-direction: column;
 }
 .detailsContainer p {
@@ -171,7 +171,6 @@ li {
   padding: 1rem;
 }
 .detailsContainer2__item_details {
-  background-color: rgb(226, 162, 162);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -181,13 +180,7 @@ li {
   background-color: rgb(218, 215, 220);
   height: 100%;
   width: 100%;
-  border-radius: 4px;
-}
-
-.product_item_detai {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  border-radius: 10px;
 }
 
 .products__footer {
