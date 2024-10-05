@@ -7,9 +7,14 @@
   &__logo-container {
     background-color: $color-yellow;
     @include flex(center);
+
+    & img{
+      width:20rem;
+    }
   }
 
   &__form-container {
     @include flex(center);
   }
 }
+

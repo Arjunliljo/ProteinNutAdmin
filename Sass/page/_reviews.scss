@@ -6,3 +6,16 @@
     @include flex(between);
   }
 }
+
+.selctors{
+  background-color: white;
+  width: 15rem;
+  border-radius: 7px;
+  border-color: black;
+  padding: .5rem ;
+
+}
+.selector{
+  @include flex(between);
+  gap:2rem;
+}

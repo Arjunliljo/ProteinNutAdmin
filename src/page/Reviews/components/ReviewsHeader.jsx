@@ -1,11 +1,12 @@
+import { Selector } from "../../../components/Selectors/Selector";
+
 function ReviewsHeader() {
   return (
     <div className="reviews__header">
       <div></div>
-      <div className="">
-        <div>First SElector</div>
-        <div>First SElector</div>
-      </div>
+      <div className="selector">
+      <Selector options = {["Catagory", "Cat 2"]}/>
+      <Selector options = {["Product", "pro 2"]}/></div>
     </div>
   );
 }
