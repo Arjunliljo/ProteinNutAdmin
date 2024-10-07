@@ -115,6 +115,7 @@ h4 {
 a {
   text-decoration: none;
   color: #717070;
+  color: #717070;
 }
 
 .active li {
@@ -144,6 +145,11 @@ li {
   height: 10rem;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: start;
+  padding: 5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -185,9 +191,21 @@ li {
 }
 .detailsContainer2__item_details_content1 {
   display: flex;
+  height: 8rem;
+}
+.detailsContainer2__item_details_content1 {
+  display: flex;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.detailsContainer2__item_details_content2 {
+  display: flex;
+  gap: 10rem;
+}
+.detailsContainer2__order {
+  margin-top: -4.4rem;
+  color: rgb(112, 110, 110);
 }
 .detailsContainer2__item_details_content2 {
   display: flex;
@@ -272,6 +290,7 @@ li {
 .orders__header-details h2 {
   font-size: 1.2rem;
   font-weight: 500;
+  color: #717070;
   color: #717070;
 }
 .orders__headeritems-container {
