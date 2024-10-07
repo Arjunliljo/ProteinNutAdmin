@@ -51,6 +51,10 @@ main {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+h4 {
+  color: #717070;
+}
+
 .login {
   width: 100vw;
   height: 100vh;
@@ -110,7 +114,7 @@ main {
 
 a {
   text-decoration: none;
-  color: #353434;
+  color: #717070;
 }
 
 .active li {
@@ -142,8 +146,9 @@ li {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 5rem;
+  justify-content: center;
+  justify-content: start;
+  padding: 5rem 2rem;
 }
 .detailsContainer__body {
   flex: 1;
@@ -176,10 +181,21 @@ li {
   padding: 0 2rem;
 }
 .detailsContainer2__item_details {
+  height: 8rem;
+}
+.detailsContainer2__item_details_content1 {
+  display: flex;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 8rem;
+}
+.detailsContainer2__item_details_content2 {
+  display: flex;
+  gap: 10rem;
+}
+.detailsContainer2__order {
+  margin-top: -4.4rem;
+  color: rgb(112, 110, 110);
 }
 
 .product_item {
@@ -195,38 +211,46 @@ li {
   justify-content: space-between;
 }
 
-.header_item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 15rem;
-  height: 5rem;
-  gap: 5rem;
-}
-
-.imageheader {
-  width: 10rem;
-}
-
-.headerOne {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-.headers_itemlevel {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5;
-}
-
 .headerlogo {
-  background-color: rgb(243, 242, 244);
+  background-color: rgb(223, 228, 228);
+  width: 16rem;
   height: 8rem;
   display: flex;
   align-items: center;
-  padding: 2rem;
+  justify-content: center;
+  margin-right: 4rem;
+  border-radius: 5px;
+}
+
+.imageheader {
+  width: 8rem;
+}
+
+.header-contents {
+  width: 100%;
+  margin-right: 4rem;
+}
+.header-contents__items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.header_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header_item-logo {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin-right: 1rem;
+  border-radius: 8px;
+}
+.header_item-content {
+  margin-right: rem;
 }
 
 .products__footer {
@@ -248,7 +272,7 @@ li {
 .orders__header-details h2 {
   font-size: 1.2rem;
   font-weight: 500;
-  color: #353434;
+  color: #717070;
 }
 .orders__headeritems-container {
   flex: 1;

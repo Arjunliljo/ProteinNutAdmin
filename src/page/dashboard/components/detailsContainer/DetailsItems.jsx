@@ -4,13 +4,16 @@ export const DetailsItems = () => {
       <div className="product_item"></div>
 
       <div className="detailsContainer2__item_details">
-        <div>
-          <p>item title here</p>
-          <p>100USD</p>
+        <div className="detailsContainer2__item_details_content1">
+          <p>Item title here</p>
+          <p >100USD</p>
         </div>
-        <div>
-          <p>12</p>
-          <p>7</p>
+        <div style={{marginTop:"-4rem"}} className="detailsContainer2__item_details_content2">
+          <div>
+          <p style={{fontWeight:"bold",fontSize:"2rem"}}>12</p>
+          <p className="detailsContainer2__order">Orders</p>
+          </div>
+          <p style={{fontSize:"1.5rem"}}>7</p>
         </div>
       </div>
     </div>

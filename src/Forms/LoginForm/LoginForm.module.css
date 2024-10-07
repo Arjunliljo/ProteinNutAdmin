@@ -3,11 +3,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 390px;
+  /* max-width: 390px; */
   margin: 0 auto;
   font-size: 13px;
   font-weight: 700;
-  padding: 20px;
+  padding: 1px;
+  width: 550px;
+  /* height: 400px; */
+  
 }
 
 /* Title styling */
@@ -29,7 +32,7 @@
 /* Label styling */
 .label {
   color: #8d8d99;
-  font-size: 10px;
+  font-size: 16px;
   margin-top: 16px;
   font-family: "Archivo", sans-serif;
   font-weight: 600;
