@@ -14,8 +14,7 @@
     border-radius: 10px;
     box-shadow: $shadow;
     @include flex(between);
-    padding :5rem;
-    
+    padding :5rem;  
 
   }
 
@@ -91,6 +90,6 @@
   align-items: center;
   padding: 2rem;
 }
-.logodesign{
-background-color: red;
-}
+// .logodesign{
+// background-color: red;
+// }
