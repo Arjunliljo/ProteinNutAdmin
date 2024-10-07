@@ -5,6 +5,7 @@ function DetailsContainer() {
   return (
     <div className="detailsContainer">
       <DetailsHeader />
+
       <DetailsBody />
     </div>
   );

@@ -13,10 +13,9 @@
     height: 10rem;
     border-radius: 10px;
     box-shadow: $shadow;
-    @include flex(between);
-    padding :5rem;
-    
-
+    @include flex(center);
+    justify-content: start;
+    padding: 5rem 2rem;
   }
 
   &__body {
@@ -64,33 +63,23 @@
 .product_item_detai {
   @include flex(between);
 }
-.header_item{
-  @include flex(between);
-  width:15rem;
-  height: 5rem;
-  gap:5rem
-  
-}
-.imageheader{
+
+.imageheader {
   width: 10rem;
 }
-.headerOne{
-  @include flex(between);
-  gap: 2rem
-}
-.headers_itemlevel{
+
+.headers_itemlevel {
   display: flex;
   flex-direction: column;
-  gap:.5;
-  
+  gap: 0.5;
 }
-.headerlogo{
-  background-color: rgb(243, 242, 244);
+.headerlogo {
+  background-color: rgb(71, 23, 119);
   height: 8rem;
   display: flex;
   align-items: center;
   padding: 2rem;
 }
-.logodesign{
-background-color: red;
+.logodesign {
+  background-color: red;
 }
