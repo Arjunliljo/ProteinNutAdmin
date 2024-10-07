@@ -3,7 +3,7 @@ import React from 'react'
 export const DetailHeaderContent = () => {
   return (
         <div className='header_item'>
-            <div>
+            <div className='logodesign'>
                  <h2>Logo</h2>
             </div>
             <div className='headers_itemlevel'>
