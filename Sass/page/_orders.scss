@@ -1,27 +1,120 @@
-.orders {
-  &__header {
-    height: 8rem;
-    @include flex(between);
-  }
-  &__header-details {
-    height: 100%;
-    width: 25rem;
+$thead-height: 2.5rem;
+$margin: 1%;
+$padding: 1%;
+$row-height: 4rem; // Increased to accommodate additional price information
+$num-rows: 6;
 
-    & h2 {
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: $text-gray;
+.orders {
+  &__body {
+    //check main-body class in base.scss
+  }
+
+  &__header {
+    //test
+  }
+
+  &__table {
+    padding: 2%;
+    background-color: $white;
+    border-radius: $border-radius-big;
+    box-shadow: $shadow;
+    
+
+    & table {
+      width: 100%;
+      height: 80%;
+      text-align: left;
+      color: #515C6B;
+
+      & tr {
+
+        &:nth-child(even) {
+          background-color: $background-gray;
+        }
+
+        &:nth-child(odd) {
+          background-color: white;
+        }
+
+        .product-column {
+          text-align: left;
+          padding-left: 1rem; // Add some left padding for better readability
+          max-width: 300px; // Increased to accommodate price information
+          word-wrap: break-word;
+
+          .price-info {
+            font-size: 0.9rem;
+            color: $text-gray;
+            display: block;
+            margin-top: 0.3rem;
+          }
+        }
+      }
+
+      & td {
+        padding: 0.5rem 0;
+        vertical-align: middle;
+      }
+    }
+
+    & thead {
+      color: $table-blue;
+      height: $thead-height;
+      background-color: transparent;
+      width: 100%;
+
+      .product-column {
+        text-align: left;
+        padding-left: 1rem; // Add some left padding for better readability
+      }
+    }
+
+    & tbody {
+      & tr {
+        height: $row-height;
+
+        &:nth-child(even) {
+          background-color: white;
+        }
+
+        &:nth-child(odd) {
+          background-color: $background-gray;
+        }
+
+        .order-number {
+          color: $table-blue;
+          font-weight: bold;
+        }
+
+        .product-column {
+          text-align: left;
+          padding-left: 1rem; // Add some left padding for better readability
+          max-width: 300px; // Increased to accommodate price information
+          word-wrap: break-word;
+          color: #00193B;
+          font-weight: 600;
+
+          .price-info {
+            font-size: 0.9rem;
+            color: $text-gray;
+            display: block;
+            margin-top: 0.3rem;
+          }
+        }
+      }
+
+      & td {
+        font-size: 1rem;
+        line-height: 1.4;
+
+        .btn {
+          white-space: nowrap; // Prevent button text from wrapping
+          display: inline-block; // Ensure the button takes only the necessary width
+        }
+      }
     }
   }
-  &__headeritems-container {
-    flex: 1;
-    height: 100%;
-    @include flex(center);
-    padding-left: 3rem;
-  }
-  &__table {
-    // check main-table in base.scss
-  }
+
   &__footer {
     @include flex(between);
   }

@@ -1,4 +1,7 @@
 import React from 'react'
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
 
 const getStockStatusClass = (stock) => {
   if (stock.includes("Out")) return "out-of-stock";
@@ -123,12 +126,12 @@ const ProductsTable = () => {
   ];
 
   return (
-    <div className="table products__table">
+    <div className=" products__table">
       <table className='main_table' >
         <thead className='table_head' >
           <tr>
-            <th><input type="checkbox" /></th> 
-            <th>IMAGE</th> 
+            <th><input type="checkbox" /></th>
+            <th className='product-icon'>IMAGE</th>
             <th>PRODUCT NAME</th>
             <th>STOCK</th>
             <th>PRICE</th>
@@ -140,20 +143,22 @@ const ProductsTable = () => {
         </thead>
         <tbody >
           {products.slice(0, 6).map((product, index) => (
-            <tr key={product.id}  index={index}>
+            <tr key={product.id} index={index}>
               <td><input type="checkbox" /></td>
               <td><div className='product_image'><img src={product.image} alt={product.name} /></div></td>
               <td>{product.name}</td>
-              
+
               <td className={`stock-status ${getStockStatusClass(product.stock)}`}>
                 {product.stock}
               </td>
-              <td>${product.price}</td> 
+              <td>${product.price}</td>
               <td>{product.category}</td>
               <td>{product.statistic}</td>
               <td>{product.date}</td>
               <td>
-                <button className="edit-button">Edit</button> 
+                <span class="material-symbols-outlined">
+                  edit_square
+                </span>
               </td>
             </tr>
           ))}
