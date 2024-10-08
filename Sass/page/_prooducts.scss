@@ -1,12 +1,94 @@
+$thead-height: 3rem;
+$margin: 1%;
+$padding: 1%;
+
+
+
 .products {
   &__body {
     //check main-body class in base.scss
   }
+
   &__header {
+    //test
   }
 
   &__table {
     //check main-body class in base.scss
+
+    padding: 1%;
+
+    & table {
+      width: 100%;
+      
+
+      text-align: center;
+
+
+    }
+
+    & thead {
+      color: $table-blue;
+      height: $thead-height;
+      background-color: transparent;
+      width: 100%;
+    }
+
+    & tbody {
+      & tr {
+        &:nth-child(even) {
+          background-color: white
+        }
+
+        &:nth-child(odd) {
+          background-color: $background-gray;
+        }
+      }
+
+      & td {
+        height: calc(100% / 6 - $thead-height);
+        min-height: calc(100% / 6 - #{$thead-height}); // Add this line
+        max-height: calc(100% / 6 - #{$thead-height}); // Add this line
+        overflow-y: auto; // Add this line
+
+
+        & .product_image {
+          padding: 5%;
+          @include flex(center);
+          // background-color: aqua;
+          height: 5rem;
+
+
+
+          & img {
+            border-radius: 20%;
+            height: 100%;
+            padding: 4%
+          }
+        }
+
+        &.stock-status {
+          font-weight: bold;
+
+          &.in-stock {
+            color: $in-stock;
+          }
+
+          &.low-inventory {
+            color: $low-inventory;
+          }
+
+          &.out-of-stock {
+            color: $out-of-stock;
+          }
+
+          &.on-demand {
+            color: $on-demand;
+          }
+        }
+      }
+    }
+
   }
 
   &__footer {

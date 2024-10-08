@@ -55,6 +55,14 @@ h4 {
   color: #717070;
 }
 
+h4 {
+  color: #717070;
+}
+
+h4 {
+  color: #717070;
+}
+
 .login {
   width: 100vw;
   height: 100vh;
@@ -115,7 +123,6 @@ h4 {
 a {
   text-decoration: none;
   color: #717070;
-  color: #717070;
 }
 
 .active li {
@@ -145,11 +152,6 @@ li {
   height: 10rem;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-content: start;
-  padding: 5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,21 +193,9 @@ li {
 }
 .detailsContainer2__item_details_content1 {
   display: flex;
-  height: 8rem;
-}
-.detailsContainer2__item_details_content1 {
-  display: flex;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.detailsContainer2__item_details_content2 {
-  display: flex;
-  gap: 10rem;
-}
-.detailsContainer2__order {
-  margin-top: -4.4rem;
-  color: rgb(112, 110, 110);
 }
 .detailsContainer2__item_details_content2 {
   display: flex;
@@ -271,6 +261,58 @@ li {
   margin-right: rem;
 }
 
+.products__table {
+  padding: 1%;
+}
+.products__table table {
+  width: 100%;
+  text-align: center;
+}
+.products__table thead {
+  color: #035ECF;
+  height: 3rem;
+  background-color: transparent;
+  width: 100%;
+}
+.products__table tbody tr:nth-child(even) {
+  background-color: white;
+}
+.products__table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+.products__table tbody td {
+  height: calc(16.6666666667% - 3rem);
+  min-height: calc(16.6666666667% - 3rem);
+  max-height: calc(16.6666666667% - 3rem);
+  overflow-y: auto;
+}
+.products__table tbody td .product_image {
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+}
+.products__table tbody td .product_image img {
+  border-radius: 20%;
+  height: 100%;
+  padding: 4%;
+}
+.products__table tbody td.stock-status {
+  font-weight: bold;
+}
+.products__table tbody td.stock-status.in-stock {
+  color: #02A189;
+}
+.products__table tbody td.stock-status.low-inventory {
+  color: #00CDAD;
+}
+.products__table tbody td.stock-status.out-of-stock {
+  color: #FF5470;
+}
+.products__table tbody td.stock-status.on-demand {
+  color: #00193B;
+}
 .products__footer {
   display: flex;
   align-items: center;
@@ -290,7 +332,6 @@ li {
 .orders__header-details h2 {
   font-size: 1.2rem;
   font-weight: 500;
-  color: #717070;
   color: #717070;
 }
 .orders__headeritems-container {
