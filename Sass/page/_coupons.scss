@@ -14,16 +14,19 @@ $num-rows: 6;
     background-color: $white;
     border-radius: $border-radius-big;
     box-shadow: $shadow;
+    overflow-y: hidden;
 
     & table {
       width: 100%;
-      border-collapse: collapse;
+      height: 100%;
+      text-align: center;
+      font-size: 0.85rem;
 
-      & tbody tr {
-        height: $row-height;
-        
+      & tr {
+        height: calc($row-height - 10px);
+
         &:nth-child(even) {
-          background-color: $white;
+          background-color: white;
         }
 
         &:nth-child(odd) {
@@ -32,10 +35,11 @@ $num-rows: 6;
       }
 
       & td, & th {
-        padding: 0.5rem;
+        padding: 0.2rem 0;
         vertical-align: middle;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         color: #515C6B;
+        
 
         &:first-child {
           width: 30px;
@@ -46,12 +50,13 @@ $num-rows: 6;
     & thead {
       color: $table-blue;
       height: $thead-height;
-      background-color: $white; // Changed from transparent to white
+      background-color: transparent;
       width: 100%;
+      font-size: 0.9rem;
 
       th {
-        text-align: left;
-        padding: 0.5rem;
+        text-align: center;
+        padding: 0.2rem 0;
         font-weight: bold;
 
         &:first-child {
@@ -62,11 +67,11 @@ $num-rows: 6;
 
     & tbody {
       & tr {
-        height: $row-height;
+        height: calc($row-height - 10px);
       }
 
       & td {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         line-height: 1.4;
 
         // Add styles for input fields
@@ -91,6 +96,7 @@ $num-rows: 6;
         .coupon-code {
           font-weight: bold;
           color: #00193B;
+          font-size: 0.8rem;
         }
 
         .coupon-description {
@@ -134,12 +140,17 @@ $num-rows: 6;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem;
+    padding: 0.75rem 1rem;
+    background-color: $white;
+    border-top-left-radius: $border-radius-big;
+    border-top-right-radius: $border-radius-big;
+    margin-bottom: 1px; // Add a small gap between header and table
   }
 
   &__header-left {
     input[type="checkbox"] {
       margin: 0;
+      cursor: pointer;
     }
   }
 

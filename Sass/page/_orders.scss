@@ -1,7 +1,7 @@
 $thead-height: 2.5rem;
 $margin: 1%;
 $padding: 1%;
-$row-height: 4rem; // Increased to accommodate additional price information
+$row-height: 3.5rem; // Reduced from 4rem to fit more rows
 $num-rows: 6;
 
 .orders {
@@ -14,7 +14,7 @@ $num-rows: 6;
   }
 
   &__table {
-    padding: 2%;
+    padding: 1%;
     background-color: $white;
     border-radius: $border-radius-big;
     box-shadow: $shadow;
@@ -22,9 +22,10 @@ $num-rows: 6;
 
     & table {
       width: 100%;
-      height: 80%;
+      height: auto; // Changed from 80% to auto to prevent scrolling
       text-align: left;
       color: #515C6B;
+      font-size: 0.85rem; // Added reduced font size for table contents
 
       & tr {
 
@@ -43,7 +44,7 @@ $num-rows: 6;
           word-wrap: break-word;
 
           .price-info {
-            font-size: 0.9rem;
+            font-size: 0.8rem; // Slightly smaller font size for price info
             color: $text-gray;
             display: block;
             margin-top: 0.3rem;
@@ -52,8 +53,9 @@ $num-rows: 6;
       }
 
       & td {
-        padding: 0.5rem 0;
+        padding: 0.5rem .3rem;
         vertical-align: middle;
+        font-size: 0.85rem; // Explicitly set font size for table cells
       }
     }
 
@@ -62,6 +64,7 @@ $num-rows: 6;
       height: $thead-height;
       background-color: transparent;
       width: 100%;
+      font-size: 0.8rem; // Slightly larger font size for the heading
 
       .product-column {
         text-align: left;
@@ -95,7 +98,7 @@ $num-rows: 6;
           font-weight: 600;
 
           .price-info {
-            font-size: 0.9rem;
+            font-size: 0.8rem; // Slightly smaller font size for price info
             color: $text-gray;
             display: block;
             margin-top: 0.3rem;
@@ -104,12 +107,16 @@ $num-rows: 6;
       }
 
       & td {
-        font-size: 1rem;
-        line-height: 1.4;
+        font-size: 0.85rem; // Explicitly set font size for table cells
+        line-height: 1.2; // Reduced from 1.4 to fit content better
+        padding: 0.3rem 0; // Reduced vertical padding
 
         .btn {
           white-space: nowrap; // Prevent button text from wrapping
           display: inline-block; // Ensure the button takes only the necessary width
+          font-size: 0.8rem; // Reduced font size for the button
+          padding: 0.4rem 1.5rem; // Reduced vertical padding
+          margin: 0 0.3rem; // Slightly increased horizontal margin
         }
       }
     }

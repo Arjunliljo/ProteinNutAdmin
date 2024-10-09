@@ -271,6 +271,7 @@ li {
   width: 100%;
   height: 80%;
   text-align: center;
+  font-size: 0.85rem;
 }
 .products__table table tr:nth-child(even) {
   background-color: #f9f9f9;
@@ -281,6 +282,7 @@ li {
 .products__table table td {
   padding: 0.2rem 0;
   vertical-align: middle;
+  font-size: 0.85rem;
 }
 .products__table table td .product_image {
   padding: 2%;
@@ -314,9 +316,10 @@ li {
   height: 2.5rem;
   background-color: transparent;
   width: 100%;
+  font-size: 0.8rem;
 }
 .products__table tbody tr {
-  height: calc(3rem - 10px);
+  height: calc(4rem - 10px);
 }
 .products__table tbody tr:nth-child(even) {
   background-color: white;
@@ -361,16 +364,17 @@ li {
 }
 
 .orders__table {
-  padding: 2%;
+  padding: 1%;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .orders__table table {
   width: 100%;
-  height: 80%;
+  height: auto;
   text-align: left;
   color: #515C6B;
+  font-size: 0.85rem;
 }
 .orders__table table tr:nth-child(even) {
   background-color: #f9f9f9;
@@ -385,27 +389,29 @@ li {
   word-wrap: break-word;
 }
 .orders__table table tr .product-column .price-info {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #717070;
   display: block;
   margin-top: 0.3rem;
 }
 .orders__table table td {
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.3rem;
   vertical-align: middle;
+  font-size: 0.85rem;
 }
 .orders__table thead {
   color: #035ECF;
   height: 2.5rem;
   background-color: transparent;
   width: 100%;
+  font-size: 0.8rem;
 }
 .orders__table thead .product-column {
   text-align: left;
   padding-left: 1rem;
 }
 .orders__table tbody tr {
-  height: 4rem;
+  height: 3.5rem;
 }
 .orders__table tbody tr:nth-child(even) {
   background-color: white;
@@ -426,18 +432,22 @@ li {
   font-weight: 600;
 }
 .orders__table tbody tr .product-column .price-info {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #717070;
   display: block;
   margin-top: 0.3rem;
 }
 .orders__table tbody td {
-  font-size: 1rem;
-  line-height: 1.4;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  padding: 0.3rem 0;
 }
 .orders__table tbody td .btn {
   white-space: nowrap;
   display: inline-block;
+  font-size: 0.8rem;
+  padding: 0.4rem 1.5rem;
+  margin: 0 0.3rem;
 }
 .orders__footer {
   display: flex;
@@ -450,24 +460,27 @@ li {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-y: hidden;
 }
 .coupons__table table {
   width: 100%;
-  border-collapse: collapse;
+  height: 100%;
+  text-align: center;
+  font-size: 0.85rem;
 }
-.coupons__table table tbody tr {
-  height: 4rem;
+.coupons__table table tr {
+  height: calc(4rem - 10px);
 }
-.coupons__table table tbody tr:nth-child(even) {
-  background-color: #fff;
+.coupons__table table tr:nth-child(even) {
+  background-color: white;
 }
-.coupons__table table tbody tr:nth-child(odd) {
+.coupons__table table tr:nth-child(odd) {
   background-color: #f9f9f9;
 }
 .coupons__table table td, .coupons__table table th {
-  padding: 0.5rem;
+  padding: 0.2rem 0;
   vertical-align: middle;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #515C6B;
 }
 .coupons__table table td:first-child, .coupons__table table th:first-child {
@@ -476,22 +489,23 @@ li {
 .coupons__table thead {
   color: #035ECF;
   height: 2.5rem;
-  background-color: #fff;
+  background-color: transparent;
   width: 100%;
+  font-size: 0.9rem;
 }
 .coupons__table thead th {
-  text-align: left;
-  padding: 0.5rem;
+  text-align: center;
+  padding: 0.2rem 0;
   font-weight: bold;
 }
 .coupons__table thead th:first-child {
   padding: 0;
 }
 .coupons__table tbody tr {
-  height: 4rem;
+  height: calc(4rem - 10px);
 }
 .coupons__table tbody td {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   line-height: 1.4;
 }
 .coupons__table tbody td input[type=text],
@@ -512,6 +526,7 @@ li {
 .coupons__table tbody td .coupon-code {
   font-weight: bold;
   color: #00193B;
+  font-size: 0.8rem;
 }
 .coupons__table tbody td .coupon-description {
   color: #515C6B;
@@ -544,10 +559,15 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 1px;
 }
 .coupons__header-left input[type=checkbox] {
   margin: 0;
+  cursor: pointer;
 }
 .coupons__header-right .coupons__add-btn {
   background-color: #035ECF;
@@ -611,7 +631,7 @@ li {
 }
 .reviews__header h2 {
   color: #035ECF;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .reviews__title {
   display: flex;
@@ -623,7 +643,7 @@ li {
 }
 .reviews__title h2 {
   color: #00193B;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0;
   font-weight: 600;
 }
@@ -632,13 +652,15 @@ li {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 .reviews__table table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 .reviews__table table tr {
-  height: 4rem;
+  height: 3rem;
 }
 .reviews__table table tr:nth-child(even) {
   background-color: white;
@@ -649,8 +671,11 @@ li {
 .reviews__table table td {
   padding: 0.5rem;
   vertical-align: middle;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #515C6B;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .reviews__table table td:first-child {
   width: 30px;
@@ -665,16 +690,19 @@ li {
   text-align: left;
   padding: 0.5rem;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .reviews__table thead th:first-child {
   width: 30px;
 }
 .reviews__table tbody tr {
-  height: 4rem;
+  height: 3rem;
 }
 .reviews__table tbody td {
-  font-size: 0.9rem;
-  line-height: 1.4;
+  font-size: 0.8rem;
+  line-height: 1.3;
 }
 .reviews__table tbody td .fa-star {
   color: #ccc;
@@ -687,9 +715,12 @@ li {
   resize: none;
   border: none;
   background-color: transparent;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #00193B;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .reviews__table tbody td .edit-button {
   padding: 5px 10px;
@@ -730,7 +761,7 @@ li {
   color: #00193B;
 }
 .reviews__name-email div:last-child {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: #717070;
 }
 .reviews__product-date .product-name {
@@ -738,7 +769,7 @@ li {
   color: #00193B;
 }
 .reviews__product-date div:last-child {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: #717070;
 }
 
@@ -758,44 +789,64 @@ li {
 }
 
 .customers__table {
-  padding: 0.5%;
+  padding: 1%;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 .customers__table table {
   width: 100%;
-  height: 80%;
-  text-align: center;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+.customers__table table tr {
+  height: 3rem;
 }
 .customers__table table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-.customers__table table tr:nth-child(odd) {
   background-color: white;
 }
+.customers__table table tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
 .customers__table table td {
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   vertical-align: middle;
+  font-size: 0.8rem;
+  color: #515C6B;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .customers__table thead {
   color: #035ECF;
   height: 2.5rem;
-  background-color: transparent;
+  background-color: white;
   width: 100%;
 }
-.customers__table tbody tr {
-  height: 4.5rem;
+.customers__table thead tr {
+  background-color: white !important;
 }
-.customers__table tbody tr:nth-child(even) {
+.customers__table thead th {
+  text-align: left;
+  padding: 0.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.8rem;
   background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
-.customers__table tbody tr:nth-child(odd) {
-  background-color: #f9f9f9;
+.customers__table tbody tr {
+  height: 3rem;
 }
 .customers__table tbody td {
-  font-size: 1rem;
-  line-height: 1.4;
+  font-size: 0.8rem;
+  line-height: 1.3;
 }
 .customers__footer {
   display: flex;
@@ -857,16 +908,17 @@ li {
 }
 
 .orders__table {
-  padding: 2%;
+  padding: 1%;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .orders__table table {
   width: 100%;
-  height: 80%;
+  height: auto;
   text-align: left;
   color: #515C6B;
+  font-size: 0.85rem;
 }
 .orders__table table tr:nth-child(even) {
   background-color: #f9f9f9;
@@ -881,27 +933,29 @@ li {
   word-wrap: break-word;
 }
 .orders__table table tr .product-column .price-info {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #717070;
   display: block;
   margin-top: 0.3rem;
 }
 .orders__table table td {
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.3rem;
   vertical-align: middle;
+  font-size: 0.85rem;
 }
 .orders__table thead {
   color: #035ECF;
   height: 2.5rem;
   background-color: transparent;
   width: 100%;
+  font-size: 0.8rem;
 }
 .orders__table thead .product-column {
   text-align: left;
   padding-left: 1rem;
 }
 .orders__table tbody tr {
-  height: 4rem;
+  height: 3.5rem;
 }
 .orders__table tbody tr:nth-child(even) {
   background-color: white;
@@ -922,18 +976,22 @@ li {
   font-weight: 600;
 }
 .orders__table tbody tr .product-column .price-info {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #717070;
   display: block;
   margin-top: 0.3rem;
 }
 .orders__table tbody td {
-  font-size: 1rem;
-  line-height: 1.4;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  padding: 0.3rem 0;
 }
 .orders__table tbody td .btn {
   white-space: nowrap;
   display: inline-block;
+  font-size: 0.8rem;
+  padding: 0.4rem 1.5rem;
+  margin: 0 0.3rem;
 }
 .orders__footer {
   display: flex;
@@ -949,7 +1007,7 @@ li {
 }
 .reviews__header h2 {
   color: #035ECF;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .reviews__title {
   display: flex;
@@ -961,7 +1019,7 @@ li {
 }
 .reviews__title h2 {
   color: #00193B;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0;
   font-weight: 600;
 }
@@ -970,13 +1028,15 @@ li {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 .reviews__table table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 .reviews__table table tr {
-  height: 4rem;
+  height: 3rem;
 }
 .reviews__table table tr:nth-child(even) {
   background-color: white;
@@ -987,8 +1047,11 @@ li {
 .reviews__table table td {
   padding: 0.5rem;
   vertical-align: middle;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #515C6B;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .reviews__table table td:first-child {
   width: 30px;
@@ -1003,16 +1066,19 @@ li {
   text-align: left;
   padding: 0.5rem;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .reviews__table thead th:first-child {
   width: 30px;
 }
 .reviews__table tbody tr {
-  height: 4rem;
+  height: 3rem;
 }
 .reviews__table tbody td {
-  font-size: 0.9rem;
-  line-height: 1.4;
+  font-size: 0.8rem;
+  line-height: 1.3;
 }
 .reviews__table tbody td .fa-star {
   color: #ccc;
@@ -1025,9 +1091,12 @@ li {
   resize: none;
   border: none;
   background-color: transparent;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #00193B;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .reviews__table tbody td .edit-button {
   padding: 5px 10px;
@@ -1068,7 +1137,7 @@ li {
   color: #00193B;
 }
 .reviews__name-email div:last-child {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: #717070;
 }
 .reviews__product-date .product-name {
@@ -1076,7 +1145,7 @@ li {
   color: #00193B;
 }
 .reviews__product-date div:last-child {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: #717070;
 }
 
@@ -1100,24 +1169,27 @@ li {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-y: hidden;
 }
 .coupons__table table {
   width: 100%;
-  border-collapse: collapse;
+  height: 100%;
+  text-align: center;
+  font-size: 0.85rem;
 }
-.coupons__table table tbody tr {
-  height: 4rem;
+.coupons__table table tr {
+  height: calc(4rem - 10px);
 }
-.coupons__table table tbody tr:nth-child(even) {
-  background-color: #fff;
+.coupons__table table tr:nth-child(even) {
+  background-color: white;
 }
-.coupons__table table tbody tr:nth-child(odd) {
+.coupons__table table tr:nth-child(odd) {
   background-color: #f9f9f9;
 }
 .coupons__table table td, .coupons__table table th {
-  padding: 0.5rem;
+  padding: 0.2rem 0;
   vertical-align: middle;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #515C6B;
 }
 .coupons__table table td:first-child, .coupons__table table th:first-child {
@@ -1126,22 +1198,23 @@ li {
 .coupons__table thead {
   color: #035ECF;
   height: 2.5rem;
-  background-color: #fff;
+  background-color: transparent;
   width: 100%;
+  font-size: 0.9rem;
 }
 .coupons__table thead th {
-  text-align: left;
-  padding: 0.5rem;
+  text-align: center;
+  padding: 0.2rem 0;
   font-weight: bold;
 }
 .coupons__table thead th:first-child {
   padding: 0;
 }
 .coupons__table tbody tr {
-  height: 4rem;
+  height: calc(4rem - 10px);
 }
 .coupons__table tbody td {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   line-height: 1.4;
 }
 .coupons__table tbody td input[type=text],
@@ -1162,6 +1235,7 @@ li {
 .coupons__table tbody td .coupon-code {
   font-weight: bold;
   color: #00193B;
+  font-size: 0.8rem;
 }
 .coupons__table tbody td .coupon-description {
   color: #515C6B;
@@ -1194,10 +1268,15 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 1px;
 }
 .coupons__header-left input[type=checkbox] {
   margin: 0;
+  cursor: pointer;
 }
 .coupons__header-right .coupons__add-btn {
   background-color: #035ECF;
