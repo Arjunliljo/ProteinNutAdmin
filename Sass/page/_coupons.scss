@@ -1,15 +1,202 @@
+$thead-height: 2.5rem;
+$margin: 1%;
+$padding: 1%;
+$row-height: 4rem;
+$num-rows: 6;
+
 .coupons {
+  &__body {
+    //check main-body class in base.scss
+  }
+
   &__table {
-    height: 90%;
-    box-shadow: $shadow;
-    background-color: white;
+    padding: 1%;
+    background-color: $white;
     border-radius: $border-radius-big;
+    box-shadow: $shadow;
+
+    & table {
+      width: 100%;
+      border-collapse: collapse;
+
+      & tbody tr {
+        height: $row-height;
+        
+        &:nth-child(even) {
+          background-color: $white;
+        }
+
+        &:nth-child(odd) {
+          background-color: $background-gray;
+        }
+      }
+
+      & td, & th {
+        padding: 0.5rem;
+        vertical-align: middle;
+        font-size: 0.9rem;
+        color: #515C6B;
+
+        &:first-child {
+          width: 30px;
+        }
+      }
+    }
+
+    & thead {
+      color: $table-blue;
+      height: $thead-height;
+      background-color: $white; // Changed from transparent to white
+      width: 100%;
+
+      th {
+        text-align: left;
+        padding: 0.5rem;
+        font-weight: bold;
+
+        &:first-child {
+          padding: 0;
+        }
+      }
+    }
+
+    & tbody {
+      & tr {
+        height: $row-height;
+      }
+
+      & td {
+        font-size: 0.9rem;
+        line-height: 1.4;
+
+        // Add styles for input fields
+        input[type="text"],
+        input[type="date"],
+        input[type="time"] {
+          width: 100%;
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 0.9rem;
+          box-sizing: border-box; // This ensures padding is included in the width
+        }
+
+        // Adjust width for date and time inputs
+        input[type="date"],
+        input[type="time"] {
+          width: calc(50% - 4px); // Subtracting 4px to account for a small gap
+          margin-right: 4px;
+        }
+
+        .coupon-code {
+          font-weight: bold;
+          color: #00193B;
+        }
+
+        .coupon-description {
+          color: #515C6B;
+        }
+
+        .coupon-date {
+          font-size: 0.8rem;
+          color: $text-gray;
+        }
+
+        .btn-edit, .btn-delete {
+          padding: 5px 10px;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          margin-right: 5px;
+        }
+
+        .btn-edit {
+          background-color: $table-blue;
+
+          &:hover {
+            background-color: darken($table-blue, 10%);
+          }
+        }
+
+        .btn-delete {
+          background-color: #f44336;
+
+          &:hover {
+            background-color: darken(#f44336, 10%);
+          }
+        }
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  &__header-left {
+    input[type="checkbox"] {
+      margin: 0;
+    }
+  }
+
+  &__header-right {
+    .coupons__add-btn {
+      background-color: $table-blue;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($table-blue, 10%);
+      }
+    }
   }
 
   &__footer {
     @include flex(between);
   }
 
-  &__footerBtns {
+  &__dropdown {
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    border-radius: 4px;
+    border: none;
+    color: #1B1B1B;
+    background-color: $white;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007BFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    background-size: 0.8rem auto;
+    padding-right: 1.5rem;
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(0, 25, 59, 0.2);
+    }
   }
 }
+
+.selctors {
+  background-color: white;
+  width: 15rem;
+  border-radius: 7px;
+  border-color: black;
+  padding: .5rem;
+}
+
+.selector {
+  @include flex(between);
+  gap: 2rem;
+}
+

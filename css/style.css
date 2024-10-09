@@ -446,16 +446,163 @@ li {
 }
 
 .coupons__table {
-  height: 90%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: white;
+  padding: 1%;
+  background-color: #fff;
   border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.coupons__table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.coupons__table table tbody tr {
+  height: 4rem;
+}
+.coupons__table table tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+.coupons__table table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+.coupons__table table td, .coupons__table table th {
+  padding: 0.5rem;
+  vertical-align: middle;
+  font-size: 0.9rem;
+  color: #515C6B;
+}
+.coupons__table table td:first-child, .coupons__table table th:first-child {
+  width: 30px;
+}
+.coupons__table thead {
+  color: #035ECF;
+  height: 2.5rem;
+  background-color: #fff;
+  width: 100%;
+}
+.coupons__table thead th {
+  text-align: left;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+.coupons__table thead th:first-child {
+  padding: 0;
+}
+.coupons__table tbody tr {
+  height: 4rem;
+}
+.coupons__table tbody td {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.coupons__table tbody td input[type=text],
+.coupons__table tbody td input[type=date],
+.coupons__table tbody td input[type=time] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+.coupons__table tbody td input[type=date],
+.coupons__table tbody td input[type=time] {
+  width: calc(50% - 4px);
+  margin-right: 4px;
+}
+.coupons__table tbody td .coupon-code {
+  font-weight: bold;
+  color: #00193B;
+}
+.coupons__table tbody td .coupon-description {
+  color: #515C6B;
+}
+.coupons__table tbody td .coupon-date {
+  font-size: 0.8rem;
+  color: #717070;
+}
+.coupons__table tbody td .btn-edit, .coupons__table tbody td .btn-delete {
+  padding: 5px 10px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.coupons__table tbody td .btn-edit {
+  background-color: #035ECF;
+}
+.coupons__table tbody td .btn-edit:hover {
+  background-color: rgb(2.2714285714, 71.1714285714, 156.7285714286);
+}
+.coupons__table tbody td .btn-delete {
+  background-color: #f44336;
+}
+.coupons__table tbody td .btn-delete:hover {
+  background-color: rgb(234.1839622642, 27.9622641509, 12.8160377358);
+}
+.coupons__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+.coupons__header-left input[type=checkbox] {
+  margin: 0;
+}
+.coupons__header-right .coupons__add-btn {
+  background-color: #035ECF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.coupons__header-right .coupons__add-btn:hover {
+  background-color: rgb(2.2714285714, 71.1714285714, 156.7285714286);
 }
 .coupons__footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+.coupons__dropdown {
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+  border-radius: 4px;
+  border: none;
+  color: #1B1B1B;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007BFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 0.8rem auto;
+  padding-right: 1.5rem;
+}
+.coupons__dropdown:focus {
+  box-shadow: 0 0 0 2px rgba(0, 25, 59, 0.2);
+}
+
+.selctors {
+  background-color: white;
+  width: 15rem;
+  border-radius: 7px;
+  border-color: black;
+  padding: 0.5rem;
+}
+
+.selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
 .reviews__header {
   display: flex;
   justify-content: space-between;
@@ -931,6 +1078,164 @@ li {
 .reviews__product-date div:last-child {
   font-size: 0.8rem;
   color: #717070;
+}
+
+.selctors {
+  background-color: white;
+  width: 15rem;
+  border-radius: 7px;
+  border-color: black;
+  padding: 0.5rem;
+}
+
+.selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.coupons__table {
+  padding: 1%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.coupons__table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.coupons__table table tbody tr {
+  height: 4rem;
+}
+.coupons__table table tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+.coupons__table table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+.coupons__table table td, .coupons__table table th {
+  padding: 0.5rem;
+  vertical-align: middle;
+  font-size: 0.9rem;
+  color: #515C6B;
+}
+.coupons__table table td:first-child, .coupons__table table th:first-child {
+  width: 30px;
+}
+.coupons__table thead {
+  color: #035ECF;
+  height: 2.5rem;
+  background-color: #fff;
+  width: 100%;
+}
+.coupons__table thead th {
+  text-align: left;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+.coupons__table thead th:first-child {
+  padding: 0;
+}
+.coupons__table tbody tr {
+  height: 4rem;
+}
+.coupons__table tbody td {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.coupons__table tbody td input[type=text],
+.coupons__table tbody td input[type=date],
+.coupons__table tbody td input[type=time] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+.coupons__table tbody td input[type=date],
+.coupons__table tbody td input[type=time] {
+  width: calc(50% - 4px);
+  margin-right: 4px;
+}
+.coupons__table tbody td .coupon-code {
+  font-weight: bold;
+  color: #00193B;
+}
+.coupons__table tbody td .coupon-description {
+  color: #515C6B;
+}
+.coupons__table tbody td .coupon-date {
+  font-size: 0.8rem;
+  color: #717070;
+}
+.coupons__table tbody td .btn-edit, .coupons__table tbody td .btn-delete {
+  padding: 5px 10px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.coupons__table tbody td .btn-edit {
+  background-color: #035ECF;
+}
+.coupons__table tbody td .btn-edit:hover {
+  background-color: rgb(2.2714285714, 71.1714285714, 156.7285714286);
+}
+.coupons__table tbody td .btn-delete {
+  background-color: #f44336;
+}
+.coupons__table tbody td .btn-delete:hover {
+  background-color: rgb(234.1839622642, 27.9622641509, 12.8160377358);
+}
+.coupons__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+.coupons__header-left input[type=checkbox] {
+  margin: 0;
+}
+.coupons__header-right .coupons__add-btn {
+  background-color: #035ECF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.coupons__header-right .coupons__add-btn:hover {
+  background-color: rgb(2.2714285714, 71.1714285714, 156.7285714286);
+}
+.coupons__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.coupons__dropdown {
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+  border-radius: 4px;
+  border: none;
+  color: #1B1B1B;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007BFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 0.8rem auto;
+  padding-right: 1.5rem;
+}
+.coupons__dropdown:focus {
+  box-shadow: 0 0 0 2px rgba(0, 25, 59, 0.2);
 }
 
 .selctors {
