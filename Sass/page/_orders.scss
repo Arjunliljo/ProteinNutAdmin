@@ -1,128 +1,167 @@
 $thead-height: 2.5rem;
-$margin: 1%;
-$padding: 1%;
-$row-height: 3.5rem; // Reduced from 4rem to fit more rows
-$num-rows: 6;
+$row-height: 6rem; // Increased row height
 
-.orders {
-  &__body {
-    //check main-body class in base.scss
+.orders__table {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    height: auto; // Remove fixed height
   }
 
-  &__header {
-    //test
+  th, td {
+    padding: 0;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.85rem;
+    height: $row-height;
+    vertical-align: top;
   }
 
-  &__table {
-    padding: 1%;
-    background-color: $white;
-    border-radius: $border-radius-big;
-    box-shadow: $shadow;
-    
+  thead {
+    color: $table-blue;
+    font-size: 0.85rem;
+    font-weight: 600;
+    height: $thead-height;
 
-    & table {
-      width: 100%;
-      height: auto; // Changed from 80% to auto to prevent scrolling
-      text-align: left;
-      color: #515C6B;
-      font-size: 0.85rem; // Added reduced font size for table contents
-
-      & tr {
-
-        &:nth-child(even) {
-          background-color: $background-gray;
-        }
-
-        &:nth-child(odd) {
-          background-color: white;
-        }
-
-        .product-column {
-          text-align: left;
-          padding-left: 1rem; // Add some left padding for better readability
-          max-width: 300px; // Increased to accommodate price information
-          word-wrap: break-word;
-
-          .price-info {
-            font-size: 0.8rem; // Slightly smaller font size for price info
-            color: $text-gray;
-            display: block;
-            margin-top: 0.3rem;
-          }
-        }
-      }
-
-      & td {
-        padding: 0.5rem .3rem;
-        vertical-align: middle;
-        font-size: 0.85rem; // Explicitly set font size for table cells
-      }
-    }
-
-    & thead {
-      color: $table-blue;
+    th {
       height: $thead-height;
-      background-color: transparent;
-      width: 100%;
-      font-size: 0.8rem; // Slightly larger font size for the heading
-
-      .product-column {
-        text-align: left;
-        padding-left: 1rem; // Add some left padding for better readability
-      }
-    }
-
-    & tbody {
-      & tr {
-        height: $row-height;
-
-        &:nth-child(even) {
-          background-color: white;
-        }
-
-        &:nth-child(odd) {
-          background-color: $background-gray;
-        }
-
-        .order-number {
-          color: $table-blue;
-          font-weight: bold;
-        }
-
-        .product-column {
-          text-align: left;
-          padding-left: 1rem; // Add some left padding for better readability
-          max-width: 300px; // Increased to accommodate price information
-          word-wrap: break-word;
-          color: #00193B;
-          font-weight: 600;
-
-          .price-info {
-            font-size: 0.8rem; // Slightly smaller font size for price info
-            color: $text-gray;
-            display: block;
-            margin-top: 0.3rem;
-          }
-        }
-      }
-
-      & td {
-        font-size: 0.85rem; // Explicitly set font size for table cells
-        line-height: 1.2; // Reduced from 1.4 to fit content better
-        padding: 0.3rem 0; // Reduced vertical padding
-
-        .btn {
-          white-space: nowrap; // Prevent button text from wrapping
-          display: inline-block; // Ensure the button takes only the necessary width
-          font-size: 0.8rem; // Reduced font size for the button
-          padding: 0.4rem 1.5rem; // Reduced vertical padding
-          margin: 0 0.3rem; // Slightly increased horizontal margin
-        }
-      }
+      vertical-align: middle;
+      padding: 0 1rem;
     }
   }
 
-  &__footer {
-    @include flex(between);
+  tbody {
+    tr {
+      height: $row-height;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+  }
+
+  .cell-content {
+    padding: 0.5rem 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .order-column {
+    color: $table-blue;
+    font-weight: 600;
+  }
+
+  .product-column {
+    .product-name {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      font-size: 0.85rem; // Reduced font size for product name
+    }
+
+    .price-info {
+      font-size: 0.75rem; // Slightly reduced font size for price info
+      color: #666;
+    }
+  }
+
+  .address-column {
+    min-width: 250px; // Increased to accommodate the new format
+    max-width: 250px; // Added to ensure consistent width
+    .formatted-address {
+      white-space: normal;
+      line-height: 1.2;
+      margin-bottom: 0.25rem; // Space between address and phone
+    }
+    .phone-number {
+      font-size: 0.8rem;
+      color: #666;
+    }
+  }
+
+  .payment-column {
+    .payment-status {
+      font-size: 0.75rem; // Slightly reduced font size for payment status
+      color: #666;
+      margin-top: 0.25rem;
+    }
+  }
+
+  .status-column {
+    .status-dropdown {
+      position: relative;
+    }
+
+    .btn {
+      padding: 0.5rem 1rem;
+      border-radius: 15rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      width: 120px; // Set a fixed width for all buttons
+      text-align: center; // Ensure text is centered
+      white-space: nowrap; // Prevent text from wrapping
+      overflow: hidden; // Hide overflowing text
+      text-overflow: ellipsis; // Show ellipsis for overflowing text
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1000;
+      display: block;
+      float: left;
+      min-width: 10rem;
+      padding: 0.5rem 0;
+      margin: 0.125rem 0 0;
+      font-size: 0.8rem;
+      color: #212529;
+      text-align: left;
+      list-style: none;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid rgba(0,0,0,.15);
+      border-radius: 0.25rem;
+      box-shadow: 0 0.5rem 1rem rgba(0,0,0,.175);
+
+      li {
+        padding: 0.25rem 1.5rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #f8f9fa;
+        }
+      }
+    }
+
+    .completed-btn {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .confirmed-btn {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .canceled-btn {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .on-refound-btn {
+      background-color: #6c757d;
+      color: white;
+    }
   }
 }

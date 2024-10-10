@@ -45,6 +45,11 @@ $num-rows: 6; // Number of rows to display
         vertical-align: middle; // Center content vertically
         font-size: 0.85rem; // Explicitly set font size for table cells
 
+        // Add this new rule for the first td (checkbox column)
+        &:first-child {
+          padding-left: 1rem; // Adjust this value as needed
+        }
+
         & .product_image {
           padding: 2%; // Reduced from 3%
           @include flex(center);
@@ -77,6 +82,11 @@ $num-rows: 6; // Number of rows to display
           }
         }
       }
+
+      .checkbox-column {
+        padding-left: 1rem; // Adjust this value as needed
+        width: 40px; // Set a fixed width for the checkbox column
+      }
     }
 
     & thead {
@@ -97,6 +107,11 @@ $num-rows: 6; // Number of rows to display
 
         &:nth-child(odd) {
           background-color: $background-gray;
+        }
+
+        // Add this new rule for the first td in tbody (checkbox column)
+        & td:first-child {
+          padding-left: 1rem; // Adjust this value as needed
         }
       }
 

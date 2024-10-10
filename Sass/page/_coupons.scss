@@ -18,7 +18,7 @@ $num-rows: 6;
 
     & table {
       width: 100%;
-      height: 100%;
+      height: 80%; // Make the table take full height of its container
       text-align: center;
       font-size: 0.85rem;
 
@@ -39,7 +39,6 @@ $num-rows: 6;
         vertical-align: middle;
         font-size: 0.85rem;
         color: #515C6B;
-        
 
         &:first-child {
           width: 30px;
@@ -52,7 +51,7 @@ $num-rows: 6;
       height: $thead-height;
       background-color: transparent;
       width: 100%;
-      font-size: 0.9rem;
+      font-size: 0.8rem; // Slightly smaller font size for the heading
 
       th {
         text-align: center;
@@ -68,6 +67,14 @@ $num-rows: 6;
     & tbody {
       & tr {
         height: calc($row-height - 10px);
+
+        &:nth-child(even) {
+          background-color: white;
+        }
+
+        &:nth-child(odd) {
+          background-color: $background-gray;
+        }
       }
 
       & td {
@@ -131,6 +138,10 @@ $num-rows: 6;
           &:hover {
             background-color: darken(#f44336, 10%);
           }
+        }
+
+        .material-symbols-outlined {
+          color: $table-blue;
         }
       }
     }

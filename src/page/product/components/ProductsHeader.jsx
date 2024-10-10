@@ -1,9 +1,11 @@
 import PrimaryBtn from "../../../components/Buttons/PrimaryBtn";
 
-function ProductsHeader() {
+function ProductsHeader({ openModal }) {
   return (
     <div className="products__header">
-      <PrimaryBtn style={{ fontWeight: "700" }}>Add new Product</PrimaryBtn>
+      <PrimaryBtn style={{ fontWeight: "700" }} onClick={openModal}>
+        Add new Product
+      </PrimaryBtn>
     </div>
   );
 }

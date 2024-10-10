@@ -10,7 +10,7 @@ const getStockStatusClass = (stock) => {
   return "in-stock";
 };
 
-const ProductsTable = () => {
+const ProductsTable = ({ selectedItems, onItemSelect }) => {
 
   const products = [
     {
@@ -126,11 +126,11 @@ const ProductsTable = () => {
   ];
 
   return (
-    <div className=" products__table">
-      <table className='main_table' >
-        <thead className='table_head' >
+    <div className="products__table">
+      <table className='main_table'>
+        <thead className='table_head'>
           <tr>
-            <th><input type="checkbox" /></th>
+            <th className="checkbox-column"></th>
             <th className='product-icon'>IMAGE</th>
             <th>PRODUCT NAME</th>
             <th>STOCK</th>
@@ -141,10 +141,16 @@ const ProductsTable = () => {
             <th>ACTIONS</th>
           </tr>
         </thead>
-        <tbody >
+        <tbody>
           {products.slice(0, 6).map((product, index) => (
             <tr key={product.id} index={index}>
-              <td><input type="checkbox" /></td>
+              <td className="checkbox-column">
+                <input 
+                  type="checkbox" 
+                  checked={selectedItems.includes(product.id)}
+                  onChange={() => onItemSelect(product.id)}
+                />
+              </td>
               <td><div className='product_image'><img src={product.image} alt={product.name} /></div></td>
               <td>{product.name}</td>
 

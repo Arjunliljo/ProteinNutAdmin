@@ -47,7 +47,7 @@ const ReviewsTable = () => {
     <div className="reviews__table">
       <div className="reviews__header">
         <div className="reviews__title">
-          <input type="checkbox" />
+          {/* <input type="checkbox" /> */}
           <h2>Latest Accepted Reviews</h2>
         </div>
         <select className="reviews__dropdown">

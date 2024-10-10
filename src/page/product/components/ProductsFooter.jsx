@@ -1,10 +1,12 @@
 import SecondaryBtn from "../../../components/Buttons/SecondaryBtn";
 
-function ProductsFooter() {
+function ProductsFooter({ selectedItems }) {
   return (
     <div className="products__footer">
       <div>Pagination</div>
-      <SecondaryBtn>Delete</SecondaryBtn>
+      {selectedItems.length > 0 && (
+        <SecondaryBtn>Delete ({selectedItems.length})</SecondaryBtn>
+      )}
     </div>
   );
 }

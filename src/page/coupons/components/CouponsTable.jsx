@@ -65,7 +65,7 @@ const CouponsTable = () => {
               <th colSpan="4">
                 <div className="coupons__header">
                   <div className="coupons__header-left">
-                    <input type="checkbox" />
+                    {/* <input type="checkbox" /> */}
                   </div>
                   <div className="coupons__header-right">
                     <button className="coupons__add-btn" onClick={handleAddClick}>
