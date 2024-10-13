@@ -1,13 +1,19 @@
 import PrimaryBtn from "../../../components/Buttons/PrimaryBtn";
 import SecondaryBtn from "../../../components/Buttons/SecondaryBtn";
 
-function CoupnsFooter() {
+function CoupnsFooter({ onCancel, onSave, onDelete, isAdding, selectedCount }) {
   return (
     <div className="coupons__footer">
-      <span></span>
+      <span>{selectedCount > 0 && `${selectedCount} selected`}</span>
       <div className="coupons__footerBtns">
-        <SecondaryBtn style={{ marginRight: ".5rem" }}>Cancel</SecondaryBtn>
-        <PrimaryBtn>Save</PrimaryBtn>
+        {isAdding ? (
+          <>
+            <SecondaryBtn style={{ marginRight: ".5rem" }} onClick={onCancel}>Cancel</SecondaryBtn>
+            <PrimaryBtn onClick={onSave}>Save</PrimaryBtn>
+          </>
+        ) : (
+          selectedCount > 0 && <SecondaryBtn onClick={onDelete}>Delete</SecondaryBtn>
+        )}
       </div>
     </div>
   );

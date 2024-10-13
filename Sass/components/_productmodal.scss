@@ -159,22 +159,26 @@
     }
   
     .cancel-btn {
-      background-color: #ff4757;
+      background-color: $color-red;
       color: white;
       border: none;
+      border-radius: 15rem;
+      padding: 0.8rem 3rem;
   
       &:hover {
-        background-color: #ff6b81;
+        background-color: $color-red;
       }
     }
   
     .publish-btn {
-      background-color: #00d2d3;
+      background-color: $color-green;
       color: white;
       border: none;
+      border-radius: 15rem;
+      padding: 0.8rem 3rem;
   
       &:hover {
-        background-color: #01a3a4;
+        background-color: $color-green;
       }
     }
   }

@@ -1,10 +1,12 @@
 import SecondaryBtn from "../../../components/Buttons/SecondaryBtn";
 
-function ReveiwsFooter() {
+function ReveiwsFooter({ selectedItems }) {
   return (
     <div className="reviews__footer">
       <div>Pagenation</div>
-      <SecondaryBtn>Delete</SecondaryBtn>
+      {selectedItems.length > 0 && (
+        <SecondaryBtn>Delete ({selectedItems.length})</SecondaryBtn>
+      )}
     </div>
   );
 }

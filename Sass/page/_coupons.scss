@@ -18,30 +18,30 @@ $num-rows: 6;
 
     & table {
       width: 100%;
-      height: 80%; // Make the table take full height of its container
-      text-align: center;
+      height: 80%;
+      text-align: left; // Changed to left alignment
       font-size: 0.85rem;
+      border-collapse: separate;
+      border-spacing: 0 8px; // Add some vertical space between rows
 
       & tr {
         height: calc($row-height - 10px);
-
-        &:nth-child(even) {
-          background-color: white;
-        }
-
-        &:nth-child(odd) {
-          background-color: $background-gray;
-        }
       }
 
       & td, & th {
-        padding: 0.2rem 0;
+        padding: 0.5rem 1rem; // Increased padding
         vertical-align: middle;
         font-size: 0.85rem;
         color: #515C6B;
+        border: none; // Remove borders
 
         &:first-child {
           width: 30px;
+          padding-left: 1rem; // Add left padding to first column
+        }
+
+        &:last-child {
+          padding-right: 1rem; // Add right padding to last column
         }
       }
     }
@@ -51,30 +51,36 @@ $num-rows: 6;
       height: $thead-height;
       background-color: transparent;
       width: 100%;
-      font-size: 0.8rem; // Slightly smaller font size for the heading
+      font-size: 0.8rem;
 
       th {
-        text-align: center;
-        padding: 0.2rem 0;
+        text-align: left; // Align header text to left
+        padding: 0.5rem 1rem;
         font-weight: bold;
 
         &:first-child {
-          padding: 0;
+          padding-left: 1rem;
         }
       }
     }
 
     & tbody {
       & tr {
-        height: calc($row-height - 10px);
+        // Remove the existing background-color
+        // background-color: $white;
 
+        // Add different colors for even and odd rows
         &:nth-child(even) {
-          background-color: white;
+          background-color: $white;
         }
 
         &:nth-child(odd) {
           background-color: $background-gray;
         }
+
+        // &:hover {
+        //   background-color: darken($background-gray, 5%);
+        // }
       }
 
       & td {
@@ -104,10 +110,30 @@ $num-rows: 6;
           font-weight: bold;
           color: #00193B;
           font-size: 0.8rem;
+          display: block;
+        }
+
+        .coupon-discount {
+          // font-size: 0.75rem;
+          color: $table-blue;
+          font-weight: bold;
+          display: block;
+          margin-top: 2px;
         }
 
         .coupon-description {
           color: #515C6B;
+          display: flex;
+          flex-direction: column;
+          line-height: 1.2;
+          height: 2.4em; // Adjust this value if needed to fit two lines
+          overflow: hidden;
+
+          div {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
         }
 
         .coupon-date {
@@ -220,5 +246,52 @@ $num-rows: 6;
 .selector {
   @include flex(between);
   gap: 2rem;
+}
+
+.coupon_code_discount {
+  display: flex;
+  gap: 3px;
+  flex-direction: row;
+}
+
+.coupons {
+  &__table {
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+  }
+
+  .coupon-code-discount {
+    display: flex;
+    flex-direction: column;
+
+    .coupon-code {
+      font-weight: bold;
+    }
+
+    .coupon-discount {
+      color: $table-blue;
+    }
+  }
+
+  .coupon-description {
+    display: block;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+
+  .coupon-date {
+    text-align: center;
+
+    div {
+      margin: 2px 0;
+    }
+  }
 }
 

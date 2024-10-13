@@ -519,26 +519,27 @@ li {
 .coupons__table table {
   width: 100%;
   height: 80%;
-  text-align: center;
+  text-align: left;
   font-size: 0.85rem;
+  border-collapse: separate;
+  border-spacing: 0 8px;
 }
 .coupons__table table tr {
   height: calc(4rem - 10px);
 }
-.coupons__table table tr:nth-child(even) {
-  background-color: white;
-}
-.coupons__table table tr:nth-child(odd) {
-  background-color: #f9f9f9;
-}
 .coupons__table table td, .coupons__table table th {
-  padding: 0.2rem 0;
+  padding: 0.5rem 1rem;
   vertical-align: middle;
   font-size: 0.85rem;
   color: #515C6B;
+  border: none;
 }
 .coupons__table table td:first-child, .coupons__table table th:first-child {
   width: 30px;
+  padding-left: 1rem;
+}
+.coupons__table table td:last-child, .coupons__table table th:last-child {
+  padding-right: 1rem;
 }
 .coupons__table thead {
   color: #035ECF;
@@ -548,18 +549,15 @@ li {
   font-size: 0.8rem;
 }
 .coupons__table thead th {
-  text-align: center;
-  padding: 0.2rem 0;
+  text-align: left;
+  padding: 0.5rem 1rem;
   font-weight: bold;
 }
 .coupons__table thead th:first-child {
-  padding: 0;
-}
-.coupons__table tbody tr {
-  height: calc(4rem - 10px);
+  padding-left: 1rem;
 }
 .coupons__table tbody tr:nth-child(even) {
-  background-color: white;
+  background-color: #fff;
 }
 .coupons__table tbody tr:nth-child(odd) {
   background-color: #f9f9f9;
@@ -587,9 +585,26 @@ li {
   font-weight: bold;
   color: #00193B;
   font-size: 0.8rem;
+  display: block;
+}
+.coupons__table tbody td .coupon-discount {
+  color: #035ECF;
+  font-weight: bold;
+  display: block;
+  margin-top: 2px;
 }
 .coupons__table tbody td .coupon-description {
   color: #515C6B;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  height: 2.4em;
+  overflow: hidden;
+}
+.coupons__table tbody td .coupon-description div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .coupons__table tbody td .coupon-date {
   font-size: 0.8rem;
@@ -686,6 +701,42 @@ li {
   gap: 2rem;
 }
 
+.coupon_code_discount {
+  display: flex;
+  gap: 3px;
+  flex-direction: row;
+}
+
+.coupons__table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.coupons__table th, .coupons__table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.coupons .coupon-code-discount {
+  display: flex;
+  flex-direction: column;
+}
+.coupons .coupon-code-discount .coupon-code {
+  font-weight: bold;
+}
+.coupons .coupon-code-discount .coupon-discount {
+  color: #035ECF;
+}
+.coupons .coupon-description {
+  display: block;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+.coupons .coupon-date {
+  text-align: center;
+}
+.coupons .coupon-date div {
+  margin: 2px 0;
+}
+
 .reviews__header {
   display: flex;
   justify-content: space-between;
@@ -734,7 +785,7 @@ li {
 .reviews__table table td {
   padding: 0.5rem;
   vertical-align: middle;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #515C6B;
   white-space: nowrap;
   overflow: hidden;
@@ -742,6 +793,21 @@ li {
 }
 .reviews__table table td:first-child {
   width: 30px;
+}
+.reviews__table table td:nth-child(2) {
+  width: 20%;
+}
+.reviews__table table td:nth-child(3) {
+  width: 10%;
+}
+.reviews__table table td:nth-child(4) {
+  width: 50%;
+  white-space: normal;
+  text-align: left;
+  padding: 0.25rem 0.5rem;
+}
+.reviews__table table td:nth-child(5) {
+  width: 20%;
 }
 .reviews__table thead {
   color: #035ECF;
@@ -761,11 +827,12 @@ li {
   width: 30px;
 }
 .reviews__table tbody tr {
-  height: 3rem;
+  height: auto;
+  min-height: 4rem;
 }
 .reviews__table tbody td {
-  font-size: 0.8rem;
-  line-height: 1.3;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 .reviews__table tbody td .fa-star {
   color: #ccc;
@@ -774,16 +841,16 @@ li {
   color: #FFD700;
 }
 .reviews__table tbody td .review-comment {
-  width: 100%;
-  resize: none;
-  border: none;
-  background-color: transparent;
-  font-size: 0.8rem;
-  color: #00193B;
-  font-weight: bold;
-  white-space: nowrap;
+  width: 50%;
+  white-space: normal;
+  text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.3;
+  max-height: 2.6em;
 }
 .reviews__table tbody td .edit-button {
   padding: 5px 10px;
@@ -1154,7 +1221,7 @@ li {
 .reviews__table table td {
   padding: 0.5rem;
   vertical-align: middle;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #515C6B;
   white-space: nowrap;
   overflow: hidden;
@@ -1162,6 +1229,21 @@ li {
 }
 .reviews__table table td:first-child {
   width: 30px;
+}
+.reviews__table table td:nth-child(2) {
+  width: 20%;
+}
+.reviews__table table td:nth-child(3) {
+  width: 10%;
+}
+.reviews__table table td:nth-child(4) {
+  width: 50%;
+  white-space: normal;
+  text-align: left;
+  padding: 0.25rem 0.5rem;
+}
+.reviews__table table td:nth-child(5) {
+  width: 20%;
 }
 .reviews__table thead {
   color: #035ECF;
@@ -1181,11 +1263,12 @@ li {
   width: 30px;
 }
 .reviews__table tbody tr {
-  height: 3rem;
+  height: auto;
+  min-height: 4rem;
 }
 .reviews__table tbody td {
-  font-size: 0.8rem;
-  line-height: 1.3;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 .reviews__table tbody td .fa-star {
   color: #ccc;
@@ -1194,16 +1277,16 @@ li {
   color: #FFD700;
 }
 .reviews__table tbody td .review-comment {
-  width: 100%;
-  resize: none;
-  border: none;
-  background-color: transparent;
-  font-size: 0.8rem;
-  color: #00193B;
-  font-weight: bold;
-  white-space: nowrap;
+  width: 50%;
+  white-space: normal;
+  text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.3;
+  max-height: 2.6em;
 }
 .reviews__table tbody td .edit-button {
   padding: 5px 10px;
@@ -1281,26 +1364,27 @@ li {
 .coupons__table table {
   width: 100%;
   height: 80%;
-  text-align: center;
+  text-align: left;
   font-size: 0.85rem;
+  border-collapse: separate;
+  border-spacing: 0 8px;
 }
 .coupons__table table tr {
   height: calc(4rem - 10px);
 }
-.coupons__table table tr:nth-child(even) {
-  background-color: white;
-}
-.coupons__table table tr:nth-child(odd) {
-  background-color: #f9f9f9;
-}
 .coupons__table table td, .coupons__table table th {
-  padding: 0.2rem 0;
+  padding: 0.5rem 1rem;
   vertical-align: middle;
   font-size: 0.85rem;
   color: #515C6B;
+  border: none;
 }
 .coupons__table table td:first-child, .coupons__table table th:first-child {
   width: 30px;
+  padding-left: 1rem;
+}
+.coupons__table table td:last-child, .coupons__table table th:last-child {
+  padding-right: 1rem;
 }
 .coupons__table thead {
   color: #035ECF;
@@ -1310,18 +1394,15 @@ li {
   font-size: 0.8rem;
 }
 .coupons__table thead th {
-  text-align: center;
-  padding: 0.2rem 0;
+  text-align: left;
+  padding: 0.5rem 1rem;
   font-weight: bold;
 }
 .coupons__table thead th:first-child {
-  padding: 0;
-}
-.coupons__table tbody tr {
-  height: calc(4rem - 10px);
+  padding-left: 1rem;
 }
 .coupons__table tbody tr:nth-child(even) {
-  background-color: white;
+  background-color: #fff;
 }
 .coupons__table tbody tr:nth-child(odd) {
   background-color: #f9f9f9;
@@ -1349,9 +1430,26 @@ li {
   font-weight: bold;
   color: #00193B;
   font-size: 0.8rem;
+  display: block;
+}
+.coupons__table tbody td .coupon-discount {
+  color: #035ECF;
+  font-weight: bold;
+  display: block;
+  margin-top: 2px;
 }
 .coupons__table tbody td .coupon-description {
   color: #515C6B;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  height: 2.4em;
+  overflow: hidden;
+}
+.coupons__table tbody td .coupon-description div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .coupons__table tbody td .coupon-date {
   font-size: 0.8rem;
@@ -1446,6 +1544,42 @@ li {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+}
+
+.coupon_code_discount {
+  display: flex;
+  gap: 3px;
+  flex-direction: row;
+}
+
+.coupons__table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.coupons__table th, .coupons__table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.coupons .coupon-code-discount {
+  display: flex;
+  flex-direction: column;
+}
+.coupons .coupon-code-discount .coupon-code {
+  font-weight: bold;
+}
+.coupons .coupon-code-discount .coupon-discount {
+  color: #035ECF;
+}
+.coupons .coupon-description {
+  display: block;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+.coupons .coupon-date {
+  text-align: center;
+}
+.coupons .coupon-date div {
+  margin: 2px 0;
 }
 
 .modal-overlay {
@@ -1591,20 +1725,24 @@ li {
   transition: background-color 0.3s;
 }
 .modal-actions .cancel-btn {
-  background-color: #ff4757;
+  background-color: #ff5470;
   color: white;
   border: none;
+  border-radius: 15rem;
+  padding: 0.8rem 3rem;
 }
 .modal-actions .cancel-btn:hover {
-  background-color: #ff6b81;
+  background-color: #ff5470;
 }
 .modal-actions .publish-btn {
-  background-color: #00d2d3;
+  background-color: #00ba9d;
   color: white;
   border: none;
+  border-radius: 15rem;
+  padding: 0.8rem 3rem;
 }
 .modal-actions .publish-btn:hover {
-  background-color: #01a3a4;
+  background-color: #00ba9d;
 }
 
 @media (max-width: 1200px) {

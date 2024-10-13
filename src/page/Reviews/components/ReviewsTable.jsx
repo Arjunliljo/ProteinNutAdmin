@@ -1,7 +1,7 @@
 import React from 'react'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-const ReviewsTable = () => {
+const ReviewsTable = ({ selectedItems, onItemSelect }) => {
   const reviews = [
     {
       name: "J. Davidson",
@@ -23,7 +23,7 @@ const ReviewsTable = () => {
       name: "Mr. Warner",
       email: "email@email.com",
       rating: 5,
-      comment: "Blandit facilisis, nibh sapien molestie felis, a vulputate orci enim a tellus. Integer ante arcu, rhoncus ac ...",
+      comment: "Blandit facilisis, nibh sapien molestie felis, a vulputate orci enim a tellus. Integer ante arcu, rhoncus ac hgsvfscjvsjdhgshdvjsgfvfhskvbf asyhvfgasukf ayskjd safygkas fasjjhashv casjcva scfuyjagskcc asycgjkhashfjc ascvcnasikcjv ...",
       product: "name name",
       date: "12.12.23 02:30 am",
     },
@@ -56,9 +56,15 @@ const ReviewsTable = () => {
       </div>
       <table className='main_table'>
         <tbody>
-          {reviews.map((review) => (
-            <tr key={review.id}>
-              <td><input type="checkbox" /></td>
+          {reviews.map((review, index) => (
+            <tr key={index}>
+              <td>
+                <input 
+                  type="checkbox" 
+                  checked={selectedItems.includes(index)}
+                  onChange={() => onItemSelect(index)}
+                />
+              </td>
               <td className="reviews__name-email">
                 <div className="customer-name">{review.name}</div>
                 <div>{review.email}</div>
